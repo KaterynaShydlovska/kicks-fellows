@@ -33,7 +33,7 @@
 // return newShoes;
 // }
 
-var sklad = ["Sneakers", "Running", "Athletic", "Slip-on"];
+var inventory = ["Sneakers", "Running", "Athletic", "Slip-on"];
 
 var username = prompt('Welcome! What is your name?');
 
@@ -47,7 +47,7 @@ while ("yes" === answer) {
 
     var shoes = prompt("What kind of shoe do you want ??");
 
-    if (sklad.includes(shoes)) {
+    if (inventory.includes(shoes)) {
 
         var shoesSize = prompt("what size of shoes do you need?")
 
