@@ -37,16 +37,18 @@ function orderKicks(name, description) {
 
 var wantsToAddShoes = prompt("Do you want to add a shoes?");
 
-if (wantsToAddShoes === 'yes') {
+while (wantsToAddShoes === 'yes') {
     // if so, ask for name description
-    var shoesName = prompt("What type of shoes do you need ?");
+    var shoesName = prompt("What kind of style shoes do you need ?");
 
-    var shoesDescription = prompt("What is the shoes description?");
+    var shoesDescription = prompt("What is the color of shoes do you need?");
     // give name description to the orderShoes function to tell it do its things
     var newShoes = orderKicks(shoesName, shoesDescription);
     //hand the resulting HTML off to document.write
 
     console.log(newShoes);
     document.write(newShoes);
+
+    wantsToAddShoes = prompt('Do you want to add another shoes?');
 
 }
