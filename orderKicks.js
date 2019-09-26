@@ -21,34 +21,41 @@
 
 */
 
-function orderKicks(name, description) {
-    var newShoes = '<div class="shoes1">' +
+//function orderKicks(name, description) {
+// var newShoes = '<div class="shoes1">' +
 
 
-        '<img src="images (1).jpeg">' +
-        '<p>Sneakers</p>' +
-        '<p>Brown shoes</p>' +
-        '</div>'
+// '<img src="images (1).jpeg">' +
+// '<p>Sneakers</p>' +
+// '<p>Brown shoes</p>' +
+// '</div>'
 
-    return newShoes;
-}
+// return newShoes;
+// }
 
-// promt user if they want to add a shoes
+var sklad = ["Sneakers", "Running", "Athletic", "Slip-on"];
 
-var wantsToAddShoes = prompt("Do you want to add a shoes?");
+var username = prompt('Welcome! What is your name?');
 
-while (wantsToAddShoes === 'yes') {
-    // if so, ask for name description
-    var shoesName = prompt("What kind of style shoes do you need ?");
+console.log('Hi' + username + '!');
 
-    var shoesDescription = prompt("What is the color of shoes do you need?");
-    // give name description to the orderShoes function to tell it do its things
-    var newShoes = orderKicks(shoesName, shoesDescription);
-    //hand the resulting HTML off to document.write
+document.write('<h1>Welcome,' + username + '!' + '</h1>');
 
-    console.log(newShoes);
-    document.write(newShoes);
+var answer = prompt("Do you want to buy shoes ?")
 
-    wantsToAddShoes = prompt('Do you want to add another shoes?');
+while ("yes" === answer) {
 
+    var shoes = prompt("What kind of shoe do you want ??");
+
+    if (sklad.includes(shoes)) {
+
+        var shoesSize = prompt("what size of shoes do you need?")
+
+        document.write('<p>Your size is ' + shoesSize + '</p>');
+
+        document.write('<p><img src="shoes*/' + shoes + '.jpg"</p > ');
+    } else {
+        alert("sorry we dont have this shoes");
+    }
+    answer = prompt("Do you want to buy another shoes ?")
 }
